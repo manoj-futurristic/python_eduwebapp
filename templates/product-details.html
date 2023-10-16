@@ -1,23 +1,26 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>Lugx Gaming - Product Detail</title>
+  <title>Edu Web</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-lugx-gaming.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css'%}">
+  <link rel="stylesheet" href="{% static 'assets/css/templatemo-lugx-gaming.css'%}">
+  <link rel="stylesheet" href="{% static 'assets/css/owl.css'%}">
+  <link rel="stylesheet" href="{% static 'assets/css/animate.css'%}">
+  <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 <!--
 
 TemplateMo 589 lugx gaming
@@ -25,6 +28,8 @@ TemplateMo 589 lugx gaming
 https://templatemo.com/tm-589-lugx-gaming
 
 -->
+</head>
+
   </head>
 
 <body>
@@ -50,17 +55,17 @@ https://templatemo.com/tm-589-lugx-gaming
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
                     <a href="index.html" class="logo">
-                        <img src="assets/images/logo.png" alt="" style="width: 158px;">
+                        <img src=" {% static 'assets/images/logo.png'%}" alt="" style="width: 158px;">
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                      <li><a href="index.html">Home</a></li>
-                      <li><a href="shop.html">Our Shop</a></li>
-                      <li><a href="product-details.html" class="active">Product Details</a></li>
-                      <li><a href="contact.html">Contact Us</a></li>
+                      <li><a href="{% url 'home'%}">Home</a></li>
+                      <li><a href="{% url 'shop'%}">Our Shop</a></li>
+                      <li><a href="{% url 'product_details'%}" class="active">Product Details</a></li>
+                      <li><a href="{% url 'contact'%}">Contact Us</a></li>
                       <li><a href="#">Sign In</a></li>
-                  </ul>   
+                  </ul> 
                     <a class='menu-trigger'>
                         <span>Menu</span>
                     </a>
@@ -88,7 +93,7 @@ https://templatemo.com/tm-589-lugx-gaming
       <div class="row">
         <div class="col-lg-6">
           <div class="left-image">
-            <img src="assets/images/single-game.jpg" alt="">
+            <img src="{% static 'assets/images/single-game.jpg'%}" alt="">
           </div>
         </div>
         <div class="col-lg-6 align-self-center">
@@ -156,14 +161,14 @@ https://templatemo.com/tm-589-lugx-gaming
         </div>
         <div class="col-lg-6">
           <div class="main-button">
-            <a href="shop.html">View All</a>
+            <a href="{% url 'shop'%}">View All</a>
           </div>
         </div>
         <div class="col-lg col-sm-6 col-xs-12">
           <div class="item">
             <h4>Action</h4>
             <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/categories-01.jpg" alt=""></a>
+              <a href="{% url 'product_details'%}"><img src="{% static 'assets/images/categories-01.jpg'%}" alt=""></a>
             </div>
           </div>
         </div>
@@ -171,7 +176,7 @@ https://templatemo.com/tm-589-lugx-gaming
           <div class="item">
             <h4>Action</h4>
             <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/categories-05.jpg" alt=""></a>
+              <a href="{% url 'product_details'%}"><img src="{% static 'assets/images/categories-02.jpg'%}" alt=""></a>
             </div>
           </div>
         </div>
@@ -179,7 +184,7 @@ https://templatemo.com/tm-589-lugx-gaming
           <div class="item">
             <h4>Action</h4>
             <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/categories-03.jpg" alt=""></a>
+              <a href="{% url 'product_details'%}"><img src="{% static 'assets/images/categories-03.jpg'%}" alt=""></a>
             </div>
           </div>
         </div>
@@ -187,7 +192,7 @@ https://templatemo.com/tm-589-lugx-gaming
           <div class="item">
             <h4>Action</h4>
             <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/categories-04.jpg" alt=""></a>
+              <a href="{% url 'product_details'%}"><img src="{% static 'assets/images/categories-04.jpg'%}" alt=""></a>
             </div>
           </div>
         </div>
@@ -195,7 +200,7 @@ https://templatemo.com/tm-589-lugx-gaming
           <div class="item">
             <h4>Action</h4>
             <div class="thumb">
-              <a href="product-details.html"><img src="assets/images/categories-05.jpg" alt=""></a>
+              <a href="{% url 'product_details'%}"><img src="{% static 'assets/images/categories-05.jpg'%}" alt=""></a>
             </div>
           </div>
         </div>
@@ -213,12 +218,12 @@ https://templatemo.com/tm-589-lugx-gaming
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/counter.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="{% static 'vendor/jquery/jquery.min.js'%}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js'%}"></script>
+  <script src="{% static 'assets/js/isotope.min.js'%}"></script>
+  <script src="{% static 'assets/js/owl-carousel.js'%}"></script>
+  <script src="{% static 'assets/js/counter.js'%}"></script>
+  <script src="{% static 'assets/js/custom.js'%}"></script>
 
   </body>
 </html>

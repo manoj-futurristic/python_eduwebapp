@@ -23,6 +23,7 @@ from django.urls import path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("edu_auth.urls")),
+     path('api/', include("edu_api.urls")),
 ]
 
 if settings.DEBUG:

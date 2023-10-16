@@ -1,10 +1,14 @@
 from django.shortcuts import render
+from . import models
 
 # Create your views here.
 
 
 def home(request):
-    return render(request,"index.html")
+    category = models.Category.objects.all()
+    return render(request,"index.html",context={
+        'category':category
+    })
 
 
 def shop(request):
